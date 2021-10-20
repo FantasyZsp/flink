@@ -31,7 +31,7 @@ under the License.
 	</parent>
 
 	<artifactId>flink-connector-jdbc-yw_${scala.binary.version}</artifactId>
-	<name>Flink : Connectors : JDBC</name>
+	<name>Flink : Connectors : JDBC-YW</name>
 
 	<packaging>jar</packaging>
 
