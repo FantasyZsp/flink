@@ -20,10 +20,10 @@ package org.apache.flink.connector.jdbc.yw;
 
 import org.apache.flink.annotation.Experimental;
 import org.apache.flink.api.common.functions.RuntimeContext;
-import org.apache.flink.connector.jdbc.internal.JdbcBatchingOutputFormat;
-import org.apache.flink.connector.jdbc.internal.connection.JdbcConnectionProvider;
-import org.apache.flink.connector.jdbc.internal.connection.SimpleJdbcConnectionProvider;
-import org.apache.flink.connector.jdbc.internal.executor.JdbcBatchStatementExecutor;
+import org.apache.flink.connector.jdbc.yw.internal.JdbcBatchingOutputFormat;
+import org.apache.flink.connector.jdbc.yw.internal.connection.JdbcConnectionProvider;
+import org.apache.flink.connector.jdbc.yw.internal.connection.SimpleJdbcConnectionProvider;
+import org.apache.flink.connector.jdbc.yw.internal.executor.JdbcBatchStatementExecutor;
 import org.apache.flink.types.Row;
 
 import org.slf4j.Logger;
@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.function.Function;
 
-import static org.apache.flink.connector.jdbc.utils.JdbcUtils.setRecordToStatement;
+import static org.apache.flink.connector.jdbc.yw.utils.JdbcUtils.setRecordToStatement;
 
 /**
  * OutputFormat to write Rows into a JDBC database. The OutputFormat has to be configured using the

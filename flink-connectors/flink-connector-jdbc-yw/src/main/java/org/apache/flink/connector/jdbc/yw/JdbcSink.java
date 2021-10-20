@@ -18,16 +18,12 @@
 package org.apache.flink.connector.jdbc.yw;
 
 import org.apache.flink.annotation.PublicEvolving;
-import org.apache.flink.connector.jdbc.internal.GenericJdbcSinkFunction;
-import org.apache.flink.connector.jdbc.internal.JdbcBatchingOutputFormat;
-import org.apache.flink.connector.jdbc.internal.connection.SimpleJdbcConnectionProvider;
-import org.apache.flink.connector.jdbc.internal.executor.JdbcBatchStatementExecutor;
-import org.apache.flink.connector.jdbc.xa.JdbcXaSinkFunction;
-import org.apache.flink.connector.jdbc.xa.XaFacade;
-import org.apache.flink.connector.jdbc.yw.JdbcConnectionOptions;
-import org.apache.flink.connector.jdbc.yw.JdbcExactlyOnceOptions;
-import org.apache.flink.connector.jdbc.yw.JdbcExecutionOptions;
-import org.apache.flink.connector.jdbc.yw.JdbcStatementBuilder;
+import org.apache.flink.connector.jdbc.yw.internal.GenericJdbcSinkFunction;
+import org.apache.flink.connector.jdbc.yw.internal.JdbcBatchingOutputFormat;
+import org.apache.flink.connector.jdbc.yw.internal.connection.SimpleJdbcConnectionProvider;
+import org.apache.flink.connector.jdbc.yw.internal.executor.JdbcBatchStatementExecutor;
+import org.apache.flink.connector.jdbc.yw.xa.JdbcXaSinkFunction;
+import org.apache.flink.connector.jdbc.yw.xa.XaFacade;
 import org.apache.flink.streaming.api.functions.sink.SinkFunction;
 import org.apache.flink.util.Preconditions;
 import org.apache.flink.util.function.SerializableSupplier;

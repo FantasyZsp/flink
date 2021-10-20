@@ -18,6 +18,7 @@
 package org.apache.flink.connector.jdbc.yw;
 
 import org.apache.flink.annotation.PublicEvolving;
+import org.apache.flink.connector.jdbc.yw.xa.XaFacade;
 import org.apache.flink.util.Preconditions;
 
 import java.io.Serializable;
@@ -45,7 +46,7 @@ import java.util.Optional;
  *   <li>block when using with some non-MVCC databases, if there are ended-not-prepared transactions
  * </ol>
  *
- * <p>See also {@link org.apache.flink.connector.jdbc.xa.XaFacade#recover()}
+ * <p>See also {@link XaFacade#recover()}
  */
 @PublicEvolving
 public class JdbcExactlyOnceOptions implements Serializable {

@@ -15,24 +15,17 @@
  * limitations under the License.
  */
 
-package org.apache.flink.connector.jdbc.yw;
+package org.apache.flink.connector.jdbc.yw.xa;
 
 import org.apache.flink.annotation.PublicEvolving;
-import org.apache.flink.connector.jdbc.yw.internal.executor.JdbcBatchStatementExecutor;
-import org.apache.flink.util.function.BiConsumerWithException;
+import org.apache.flink.runtime.state.FunctionInitializationContext;
 
 import java.io.Serializable;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
-/**
- * Sets {@link PreparedStatement} parameters to use in JDBC Sink based on a specific type of
- * StreamRecord.
- *
- * @param <T> type of payload in {@link org.apache.flink.streaming.runtime.streamrecord.StreamRecord
- *     StreamRecord}
- * @see JdbcBatchStatementExecutor
- */
 @PublicEvolving
-public interface JdbcStatementBuilder<T>
-        extends BiConsumerWithException<PreparedStatement, T, SQLException>, Serializable {}
+interface XaSinkStateHandler extends Serializable {
+
+    JdbcXaSinkFunctionState load(FunctionInitializationContext context) throws Exception;
+
+    void store(JdbcXaSinkFunctionState state) throws Exception;
+}
