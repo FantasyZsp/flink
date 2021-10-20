@@ -53,7 +53,7 @@ import static org.apache.flink.util.Preconditions.checkState;
 @Internal
 public class JdbcDynamicTableFactory implements DynamicTableSourceFactory, DynamicTableSinkFactory {
 
-    public static final String IDENTIFIER = "jdbc-yw";
+    public static final String IDENTIFIER = "jdbc";
     public static final ConfigOption<String> URL =
             ConfigOptions.key("url")
                     .stringType()

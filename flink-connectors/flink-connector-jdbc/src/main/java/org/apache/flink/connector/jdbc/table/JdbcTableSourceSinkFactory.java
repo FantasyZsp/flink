@@ -82,7 +82,7 @@ public class JdbcTableSourceSinkFactory
     @Override
     public Map<String, String> requiredContext() {
         Map<String, String> context = new HashMap<>();
-        context.put(CONNECTOR_TYPE, CONNECTOR_TYPE_VALUE_JDBC); // jdbc-yw
+        context.put(CONNECTOR_TYPE, CONNECTOR_TYPE_VALUE_JDBC); // jdbc
         context.put(CONNECTOR_PROPERTY_VERSION, "1"); // backwards compatibility
         return context;
     }
