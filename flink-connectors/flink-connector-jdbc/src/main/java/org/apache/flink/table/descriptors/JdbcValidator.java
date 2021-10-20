@@ -33,7 +33,7 @@ import static org.apache.flink.table.descriptors.Schema.SCHEMA;
 @Internal
 public class JdbcValidator extends ConnectorDescriptorValidator {
 
-    public static final String CONNECTOR_TYPE_VALUE_JDBC = "jdbc";
+    public static final String CONNECTOR_TYPE_VALUE_JDBC = "jdbc-yw";
 
     public static final String CONNECTOR_URL = "connector.url";
     public static final String CONNECTOR_TABLE = "connector.table";

@@ -80,6 +80,14 @@ public class MySQLDialect extends AbstractDialect {
             String tableName, String[] fieldNames, String[] uniqueKeyFields) {
         String updateClause =
                 Arrays.stream(fieldNames)
+                        .filter(
+                                f -> {
+                                    if (tableName.equalsIgnoreCase("houseshape")
+                                            || tableName.equalsIgnoreCase("house_shape")) {
+                                        return !f.equalsIgnoreCase("id");
+                                    }
+                                    return true;
+                                })
                         .map(f -> quoteIdentifier(f) + "=VALUES(" + quoteIdentifier(f) + ")")
                         .collect(Collectors.joining(", "));
         return Optional.of(

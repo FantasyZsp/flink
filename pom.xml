@@ -91,6 +91,7 @@ under the License.
 	</modules>
 
 	<properties>
+		<rootDir>C:\Users\zhaosp\Documents\yw-flink</rootDir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<hadoop.version>2.4.1</hadoop.version>
@@ -1821,23 +1822,23 @@ under the License.
 			</plugin>
 
 			<!-- generate configuration docs -->
-			<plugin>
-				<groupId>org.commonjava.maven.plugins</groupId>
-				<artifactId>directory-maven-plugin</artifactId>
-				<version>0.1</version>
-				<executions>
-					<execution>
-						<id>directories</id>
-						<goals>
-							<goal>highest-basedir</goal>
-						</goals>
-						<phase>initialize</phase>
-						<configuration>
-							<property>rootDir</property>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.commonjava.maven.plugins</groupId>-->
+<!--				<artifactId>directory-maven-plugin</artifactId>-->
+<!--				<version>0.1</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>directories</id>-->
+<!--						<goals>-->
+<!--							<goal>highest-basedir</goal>-->
+<!--						</goals>-->
+<!--						<phase>initialize</phase>-->
+<!--						<configuration>-->
+<!--							<property>rootDir</property>-->
+<!--						</configuration>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
 		</plugins>
 
 		<pluginManagement>
