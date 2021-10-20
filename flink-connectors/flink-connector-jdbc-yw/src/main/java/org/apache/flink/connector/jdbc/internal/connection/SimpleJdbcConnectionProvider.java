@@ -17,7 +17,7 @@
 
 package org.apache.flink.connector.jdbc.internal.connection;
 
-import org.apache.flink.connector.jdbc.JdbcConnectionOptions;
+import org.apache.flink.connector.jdbc.yw.JdbcConnectionOptions;
 import org.apache.flink.util.Preconditions;
 
 import org.slf4j.Logger;

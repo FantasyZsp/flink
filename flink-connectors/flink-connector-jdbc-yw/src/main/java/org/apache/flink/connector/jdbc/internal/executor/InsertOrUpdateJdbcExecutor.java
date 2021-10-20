@@ -18,7 +18,7 @@
 package org.apache.flink.connector.jdbc.internal.executor;
 
 import org.apache.flink.annotation.Internal;
-import org.apache.flink.connector.jdbc.JdbcStatementBuilder;
+import org.apache.flink.connector.jdbc.yw.JdbcStatementBuilder;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

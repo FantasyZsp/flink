@@ -15,19 +15,24 @@
  * limitations under the License.
  */
 
-package org.apache.flink.connector.jdbc;
+package org.apache.flink.connector.jdbc.yw;
 
-/** Holds id and indices of items in {@link JdbcTestFixture#TEST_DATA}. */
-public class JdbcTestCheckpoint {
-    public final long id;
-    public final int[] dataItemsIdx;
+import org.apache.flink.annotation.PublicEvolving;
+import org.apache.flink.connector.jdbc.internal.executor.JdbcBatchStatementExecutor;
+import org.apache.flink.util.function.BiConsumerWithException;
 
-    JdbcTestCheckpoint(long id, int... dataItemsIdx) {
-        this.id = id;
-        this.dataItemsIdx = dataItemsIdx;
-    }
+import java.io.Serializable;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
-    public JdbcTestCheckpoint withCheckpointId(long id) {
-        return new JdbcTestCheckpoint(id, dataItemsIdx);
-    }
-}
+/**
+ * Sets {@link PreparedStatement} parameters to use in JDBC Sink based on a specific type of
+ * StreamRecord.
+ *
+ * @param <T> type of payload in {@link org.apache.flink.streaming.runtime.streamrecord.StreamRecord
+ *     StreamRecord}
+ * @see JdbcBatchStatementExecutor
+ */
+@PublicEvolving
+public interface JdbcStatementBuilder<T>
+        extends BiConsumerWithException<PreparedStatement, T, SQLException>, Serializable {}

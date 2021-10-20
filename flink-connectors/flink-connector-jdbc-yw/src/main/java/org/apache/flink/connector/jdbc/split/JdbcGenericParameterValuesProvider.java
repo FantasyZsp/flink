@@ -19,7 +19,7 @@
 package org.apache.flink.connector.jdbc.split;
 
 import org.apache.flink.annotation.Experimental;
-import org.apache.flink.connector.jdbc.JdbcInputFormat;
+import org.apache.flink.connector.jdbc.yw.JdbcInputFormat;
 
 import java.io.Serializable;
 

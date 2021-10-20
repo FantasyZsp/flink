@@ -18,7 +18,7 @@
 
 package org.apache.flink.connector.jdbc.internal.options;
 
-import org.apache.flink.connector.jdbc.JdbcExecutionOptions;
+import org.apache.flink.connector.jdbc.yw.JdbcExecutionOptions;
 
 import java.io.Serializable;
 import java.util.Objects;
